@@ -1,0 +1,39 @@
+{
+  "name": "airport_challenge_oloo",
+  "version": "1.0.0",
+  "description": "airport challenge kata solved using JS OLOO style",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "grunt karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/giamir/airport_challenge_oloo.git"
+  },
+  "author": "giamir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giamir/airport_challenge_oloo/issues"
+  },
+  "homepage": "https://github.com/giamir/airport_challenge_oloo#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.8",
+    "grunt": "^0.4.5",
+    "grunt-karma": "^0.12.1",
+    "jasmine-core": "^2.4.1",
+    "jasmine-spec-reporter": "^2.4.0",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-coveralls": "^1.1.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-spec-reporter": "0.0.23",
+    "phantomjs": "^2.1.3",
+    "phantomjs-prebuilt": "^2.1.3"
+  }
+}
