@@ -1,15 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    karma: {
-      options: {
-        configFile: './test/conf.js'
-      },
-      run: {
-      }
-    }
+    jasmine_nodejs: grunt.file.readYAML('test/conf.yml')
   });
-
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.registerTask('unit', ['karma']);
+  grunt.loadNpmTasks('grunt-jasmine-nodejs');
 };

@@ -1,0 +1,62 @@
+# Config for grunt-jasmine-nodejs
+# https://github.com/onury/grunt-jasmine-nodejs
+{
+    # task specific (default) options
+    options: {
+        specNameSuffix: "spec.js", # also accepts an array
+        helperNameSuffix: "helper.js",
+        useHelpers: false,
+        random: false,
+        seed: null,
+        # defaultTimeout: 10000,
+        stopOnFailure: false,
+        traceFatal: true,           # (0|false)|(1|true)|2
+        # options for built-in reporters
+        reporters: {
+            # console (default) reporter
+            console: {
+                colors: true,
+                cleanStack: 1,       # (0|false)|(1|true)|2|3
+                verbosity: 4,        # (0|false)|1|2|(3|true)|4
+                listStyle: "indent", # "flat"|"indent"
+                activity: true
+            },
+            junit: {
+                savePath: "./reports",
+                filePrefix: "junit-report",
+                consolidate: true,
+                useDotNotation: true
+            },
+            nunit: {
+                savePath: "./reports",
+                filename: "nunit-report.xml",
+                reportName: 'Test Results'
+            },
+            # terminal: {
+            #     color: false,
+            #     showStack: false,
+            #     verbosity: 2        # 0|1|2|3
+            # },
+            # teamcity: true,
+            # tap: true
+        },
+        # list of custom Jasmine reporter objects
+        customReporters: []
+    },
+    other: {
+        options: {
+            reporters: {
+                console: {
+                    colors: true,
+                    cleanStack: 3,
+                    verbosity: 4,
+                    listStyle: "indent",
+                    activity: false
+                }
+            }
+        },
+        specs: [
+            "test/**"
+        ]
+    }
+}
