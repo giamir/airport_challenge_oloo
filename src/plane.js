@@ -1,4 +1,4 @@
-var Plane = (function () {
+module.exports = (function () {
   var Plane = {};
   var privateStore = {};
   var uid = 0;
@@ -28,5 +28,3 @@ var Plane = (function () {
 
   return Plane;
 })();
-
-module.exports = Plane;

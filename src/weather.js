@@ -1,7 +1,9 @@
-var Weather = {
-  isStormy: function() {
-    return (Math.floor(Math.random() * 3) === 0);
-  }
-};
+module.exports = (function () {
+  var Weather = {};
 
-module.exports = Weather;
+  Weather.isStormy = function() {
+    return (Math.floor(Math.random() * 3) === 0);
+  };
+
+  return Weather;
+})();
