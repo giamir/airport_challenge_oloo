@@ -4,8 +4,8 @@
   "description": "airport challenge kata solved using JS OLOO style",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "grunt jasmine_nodejs"
+    "test": "grunt jasmine_nodejs",
+    "debug": "node-debug $(which grunt) jasmine_nodejs"
   },
   "repository": {
     "type": "git",
