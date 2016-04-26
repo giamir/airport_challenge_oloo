@@ -3,6 +3,11 @@ module.exports = (function () {
   var privateStore = {};
   var uid = 0;
   var DEFAULT_CAPACITY = 20;
+  var ERR_MSGS = {
+    stormy: 'Unable to land or take off due to stormy weather',
+    airportFull: 'Unable to land cause airport is full',
+    planeNotPresent: 'Unable to instruct plane to take off cause is not in the airport'
+  };
 
   Airport.init = function(opts) {
     opts.capacity = typeof opts.capacity !== 'undefined' ? opts.capacity : DEFAULT_CAPACITY;
@@ -22,14 +27,25 @@ module.exports = (function () {
   };
 
   Airport.land = function(plane) {
-    if (isStormy.call(this)) { throw new Error('Unable to land due to stormy weather'); }
-    if (isFull.call(this)) { throw new Error('Unable to land cause airport is full'); }
+    if (isStormy.call(this)) { throw new Error(ERR_MSGS.stormy); }
+    if (isFull.call(this)) { throw new Error(ERR_MSGS.airportFull); }
     plane.land();
     addPlane.call(this, plane);
   };
 
+  Airport.takeOff = function(plane) {
+    if (isStormy.call(this)) { throw new Error(ERR_MSGS.stormy); }
+    if (planeIndex.call(this, plane) === -1) { throw new Error(ERR_MSGS.planeNotPresent); }
+    plane.takeOff();
+    removePlane.call(this, plane);
+  };
+
   function addPlane(plane) {
     privateStore[this.id].planes.push(plane);
+  }
+
+  function removePlane(plane) {
+    privateStore[this.id].planes.splice(planeIndex.call(this, plane), 1);
   }
 
   function isFull() {
@@ -38,6 +54,10 @@ module.exports = (function () {
 
   function isStormy() {
     return privateStore[this.id].weather.isStormy();
+  }
+
+  function planeIndex(plane) {
+    return privateStore[this.id].planes.indexOf(plane);
   }
 
   return Airport;
