@@ -6,7 +6,7 @@ It's an integration to my presentation:<br>
 _JS: Leave the classes to those other languages_
 
 [browse the slides](https://speakerdeck.com/giamir/js-leave-the-classes-to-those-other-languages)<br>
-[watch the video](http://giamir.com) (15 mins)
+[watch the video](https://youtu.be/HnQ0FPwcaZ4) (15 mins)
 
 It's also implementing _private members_ in JS to preserve encapsulation and do not expose the internal state of the objects. Thanks to Philip Walton for [this](http://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/) brilliant article which inspired me.
 
@@ -129,11 +129,9 @@ So the system is consistent and correctly reports plane status and location
 I want to ensure a plane that has taken off from an airport is no longer in that airport
 ```
 
-## OLOO Mental Maps
+## Mental Map
 
-
-
-
+![mental map](http://i.imgur.com/I7zvHgS.jpg)
 
 ## Running tests
 
