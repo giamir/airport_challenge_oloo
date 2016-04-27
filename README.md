@@ -1,1 +1,1 @@
-## Airport Challenge OLOO
+## Airport Challenge OLOO [![Build Status](https://travis-ci.org/giamir/airport_challenge_oloo.svg?branch=master)](https://travis-ci.org/giamir/airport_challenge_oloo) [![Coverage Status](https://coveralls.io/repos/github/giamir/airport_challenge_oloo/badge.svg?branch=master)](https://coveralls.io/github/giamir/airport_challenge_oloo?branch=master)
