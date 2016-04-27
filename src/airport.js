@@ -30,7 +30,7 @@ module.exports = (function () {
   Airport.land = function(plane) {
     if (isStormy.call(this)) { throw new Error(ERR_MSGS.stormy); }
     if (isFull.call(this)) { throw new Error(ERR_MSGS.airportFull); }
-    plane.land();
+    plane.land(this);
     addPlane.call(this, plane);
   };
 

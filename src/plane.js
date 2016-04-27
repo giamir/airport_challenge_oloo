@@ -8,11 +8,9 @@ module.exports = (function () {
     unableToTakeOff: 'Unable to take off cause is already flying'
   };
 
-  Plane.init = function(airport) {
-    if (typeof airport === 'undefined') { throw new Error(ERR_MSGS.notValidAirport); }
+  Plane.init = function() {
     privateStore[this.id = uid++] = {};
-    privateStore[this.id].isFlying = false;
-    privateStore[this.id].airport = airport;
+    privateStore[this.id].isFlying = true;
   };
 
   Plane.isFlying = function() {

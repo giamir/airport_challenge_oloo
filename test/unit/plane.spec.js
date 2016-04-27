@@ -7,23 +7,8 @@ describe('Plane', function() {
   beforeEach(function() {
     airportMock = jasmine.createSpy('airport');
     plane = Object.create(Plane);
-    plane.init(airportMock);
-  });
-
-  describe('#init', function() {
-    var planeAux;
-    beforeEach(function() {
-      airportMock = jasmine.createSpy('airport');
-      planeAux = Object.create(Plane);
-    });
-    it('initialize plane with the airport passed as argument', function() {
-      planeAux.init(airportMock);
-      expect(planeAux.airport()).toEqual(airportMock);
-    });
-    it('throw an error if no airport is passed as argument', function() {
-      var msg = 'You need to specify a valid airport';
-      expect( function() { planeAux.init(); } ).toThrowError(msg);
-    });
+    plane.init();
+    plane.land(airportMock);
   });
 
   describe('#isFlying', function() {

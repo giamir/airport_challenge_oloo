@@ -26,7 +26,7 @@ describe('Airport', function() {
   describe('#land', function() {
    it('instructs the plane to land', function() {
      airport.land(planeMock);
-     expect(planeMock.land).toHaveBeenCalled();
+     expect(planeMock.land).toHaveBeenCalledWith(airport);
    });
    it('has the plane after it has landed', function() {
      airport.land(planeMock);
