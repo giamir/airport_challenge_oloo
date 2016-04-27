@@ -10,6 +10,7 @@ module.exports = (function () {
   };
 
   Airport.init = function(opts) {
+    opts = typeof opts !== 'undefined' ? opts : {};
     opts.capacity = typeof opts.capacity !== 'undefined' ? opts.capacity : DEFAULT_CAPACITY;
     opts.weatherObj = typeof opts.weatherObj !== 'undefined' ? opts.weatherObj : require('./weather');
     privateStore[this.id = uid++] = {};
