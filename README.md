@@ -3,7 +3,7 @@
 This repo provides a practical example of how to use the prototype chain mechanism in JS without faking classes. It embraces delegation oriented design using Kyle Simpson __OLOO style__ (objects linked to other objects).
 
 It's an integration to my presentation:<br>
-_JS: Leave the classes to those other languages_
+[_JS: Leave the classes to those other languages_](https://giamir.com/js-leave-the-classes-to-those-other-languages)
 
 [browse the slides](https://speakerdeck.com/giamir/js-leave-the-classes-to-those-other-languages)<br>
 [watch the video](https://youtu.be/HnQ0FPwcaZ4) (15 mins)
